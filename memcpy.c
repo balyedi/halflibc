@@ -1,6 +1,6 @@
-void *memcpy(void *dest, const void * src, size_t n) {
+void *memcpy(char*dest, char* src, size_t n) {
 	i = 0;
-	while(n =< i) {
+	while(n <= i) {
 		src[i] = dest[i];
 	}
 	i++;
