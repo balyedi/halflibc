@@ -1,9 +1,6 @@
-size_t
-strlen(const char *str)
-{
-        const char *s = 0;
-	uint8_t i = 0;
-        for (i = 0)
-                ;
-        return (s - str);
+size_t strlen(const char* str) {
+	size_t len = 0;
+	while (str[len])
+		len++;
+	return len;
 }
