@@ -1,7 +1,9 @@
-size_t strlen(char* string) {
-	uint16_t i = 0;
-	while(string[i] != '\0') {
-		i++;
-	}
-	return i;
+size_t
+strlen(const char *str)
+{
+        const char *s;
+
+        for (s = str; *s; ++s)
+                ;
+        return (s - str);
 }
