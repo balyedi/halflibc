@@ -1,7 +1,9 @@
-void *memcpy(char*dest, char* src, size_t n) {
-	int i = 0;
-	while(n <= i) {
-		src[i] = dest[i];
-	}
-	i++;
+void *memcpy(void *dest, const void *src, size_t n)
+{
+	size_t i;
+
+	for (i = 0; i < n; ++i)
+		((unsigned char *) dest)[i] = ((unsigned char *) src)[i];
+
+	return dest;
 }

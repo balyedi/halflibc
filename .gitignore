@@ -1,3 +1,7 @@
 *.gch
 *.o
+*.a
 funcdefs.h
+test.c
+*.out
+all.c

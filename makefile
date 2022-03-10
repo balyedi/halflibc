@@ -1,7 +1,8 @@
 CFLAGS=-ffreestanding -nostdlib
 
 all:
-	cat typedefs.h memcpy.c memrep.c strlen.c strcmp.c > all.c
+	cat typedefs.h memcpy.c memrep.c strlen.c strcmp.c strtok.c > all.c
 	gcc $(CFLAGS) all.c -o all.o
-	sh -c 'printf "typedef unsigned char uint8_t;\ntypedef unsigned int size_t;\n" > funcdefs.h'
+	sh -c 'cat typedefs.h > funcdefs.h'
 	sh -c "tclsh prototype.tcl >> funcdefs.h"
+	ar rcs libhlibc.a all.o
